@@ -1,0 +1,1 @@
+https://pixabay.com/vectors/fingers-fist-hands-paper-rock-149296/

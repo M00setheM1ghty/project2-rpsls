@@ -6,12 +6,13 @@
 }
 
 body {
-    background-color:burlywood;
+    background-color: burlywood;
     padding: 30px;
     margin: auto;
     max-width: fit-content;
     text-align: center;
 }
+
 .container {
     display: flex;
     justify-content: center;
@@ -19,11 +20,21 @@ body {
     flex-direction: column;
     padding: 30px;
 }
+
+/* top section styling */
 .top-section {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     padding: 20px;
 }
+
+img {
+    height: 500px;
+
+}
+
+/* game section styling */
 .header-div {
     display: flex;
     justify-content: center;
@@ -32,6 +43,8 @@ body {
     justify-content: center;
     padding: 50px;
 }
+
+/* buttons styling */
 .choice-btn {
     background-color: brown;
     color: aliceblue;
@@ -40,8 +53,8 @@ body {
     padding: 10px;
     margin: 5px;
 }
+
 .score-section {
     padding-top: 20px;
     font-size: 1.2rem;
 }
-
