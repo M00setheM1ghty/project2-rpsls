@@ -21,9 +21,25 @@ function generateComHand() {
             break;
         case 4: 
             return comChoice = 'spock'
-            break;
-            
+            break;  
 }
+}
+
+// event listners for the buttons
+let rockButton = document.querySelector('#rock')
+rockButton.addEventListener('click', pickedRockLogic)
+
+let paperButton = document.querySelector('#paper')
+paperButton.addEventListener('click', pickedPaperLogic)
+
+let scissorsButton = document.querySelector('#scissors')
+scissorsButton.addEventListener('click', pickedScissorsLogic)
+
+let lizardButton = document.querySelector('#lizard')
+lizarcButton.addEventListener('click', pickedLizardLogic)
+
+let spockButton = document.querySelector('#spock')
+spockButton.addEventListener('click', pickedSpockLogic)
 
 //functions that determine the actions when a specific hand is chosen
 
