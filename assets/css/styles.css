@@ -105,3 +105,13 @@ i {
 #game-rules > * {
     padding: 20px;
 }
+
+/* about page styling */
+#about {
+    font-size: 20px;
+    border: 5px solid brown;
+}
+#about li {
+    list-style-type: none;
+    padding: 20px;
+}

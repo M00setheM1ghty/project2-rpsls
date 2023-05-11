@@ -127,6 +127,8 @@ I have some knowledge from certifications I did outside of CodeInstitute so I re
 [freeCodeCamp Certification][freecode]
 [freeCodeCamp Certification2]https://www.freecodecamp.org/certification/MightyM00se/javascript-algorithms-and-data-structures
 
+About section content: https://screenrant.com/big-bang-theory-sheldon-rock-paper-scissors-rules/
+
 
 ### Content
 
