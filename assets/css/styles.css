@@ -20,7 +20,32 @@ body {
     flex-direction: column;
     
 }
-
+/* header styling */
+.header {
+    display: flex;
+    justify-content: center;
+}
+#header-div {
+    background-color: brown;
+    padding: 30px;
+    border-radius: 2%;
+    max-width: 300px;
+}
+#header-div ul {
+    list-style-type: none;
+    display: flex;
+}
+#header-div li {
+    margin-right: 20px;
+    font-size: 2rem;
+}
+#header-div a {
+    text-decoration: none;
+    color: aliceblue;
+}
+#header-div a:hover {
+    color: cornflowerblue;
+}
 /* top section styling */
 .top-section {
     display: flex;
@@ -62,6 +87,9 @@ h1 {
     padding: 10px;
     margin: 5px;
 }
+.choice-btn:hover {
+    color:cornflowerblue;
+}
 
 .score-section {
     padding-top: 20px;
@@ -71,4 +99,9 @@ h1 {
 i {
     padding-right: 20px;
     padding-left: 5px;
+}
+
+/* rules page styling */
+#game-rules > * {
+    padding: 20px;
 }
