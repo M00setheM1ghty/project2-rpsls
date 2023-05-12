@@ -4,6 +4,7 @@ const PAPER = "paper"
 const SCISSORS = "scissors"
 const LIZARD = "lizard"
 const SPOCK = "spock"
+const BUTTONS = document.querySelectorAll('[data-button]');
 
 /**
  * generate a random number between 0 and 4 to choose a 'hand' for the computer
@@ -30,9 +31,13 @@ function generateComHand() {
 // returned values are passed on to the other functions as parameters
 let rockButton = document.querySelector('#rock')
 rockButton.addEventListener('click', () => {
+
     const comChoice = generateComHand();
     const winningStatement = pickedRockLogic(comChoice);
     const message = createsWinningMessage(ROCK, comChoice, winningStatement);
+    updateGamesPlayed();
+    const count = incrementCount()
+    displayGamesPlayed(count);
     alert(message)
 })
 
@@ -68,6 +73,35 @@ spockButton.addEventListener('click', () => {
     const message = createsWinningMessage(SPOCK, comChoice, winningStatement)
     alert(message);
 })
+
+/**
+ * displays winning screen content according to the games result
+ */
+function displayWinningScreen() {
+    displayMessage = document.createElement('div');
+    displayMessage.innerText = toString(winningMessage);
+}
+function updateScore(winningStatement,) {
+
+}
+
+
+// function updateGamesPlayed() {
+//     BUTTONS.forEach(element => {
+//         element.addEventListener('click', () => {
+//             return gamesPlayed
+//         })
+//     });
+// }
+
+// let gamesPlayed = 0;
+// function incrementCount(){
+//     return (gamesPlayed += 1)
+// }
+
+// function displayGamesPlayed(count) {
+//     document.getElementById('games-played').innerText = `Games played: ${count}`;
+// }
 
 //functions that determine the actions when a specific hand is chosen
 /**
@@ -156,12 +190,4 @@ function pickedSpockLogic(comChoice) {
  */
 function createsWinningMessage(humanChoice, comChoice, winningStatement) {
     return `You chose ${humanChoice}. The COM chose ${comChoice}. ${winningStatement} `
-}
-
-/**
- * displays winning screen content according to the games result
- */
-function displayWinningScreen() {
-    displayMessage = document.createElement('div');
-    displayMessage.innerText = toString(winningMessage);
 }
