@@ -90,9 +90,9 @@ The image is supposed to highlight that the game is a version of rock paper scis
 
 #### Lighthouse
 
-#### W3C:
+#### W3C
 
-#### Jigsaw:
+#### Jigsaw
 
 ### Bugs
 
@@ -103,7 +103,7 @@ The image is supposed to highlight that the game is a version of rock paper scis
 - JavaScript
 
 ### Frameworks, Libraries & Programs Used
-- Google Fonts - for the font families: Dancing Script, Merriweather Sans and Rubik. San-serif was used as fallback font.
+- Google Fonts 
 - Font Awesome - to add icons to the social links in the footer element.
 - CodeAnywhere/VS Code
 - GitHub - to store my repository for submission.
@@ -129,6 +129,8 @@ I have some knowledge from certifications I did outside of CodeInstitute so I re
 
 About section content: https://screenrant.com/big-bang-theory-sheldon-rock-paper-scissors-rules/
 
+Stack Overflow provided the method to call to functions with one event listener:
+https://stackoverflow.com/questions/25028853/addeventlistener-two-functions
 
 ### Content
 
