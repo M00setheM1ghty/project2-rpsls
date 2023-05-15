@@ -105,7 +105,7 @@ document.getElementById('reset-btn').addEventListener('click', () => {
 })
 
 /**
- * always increments how many games have been played by 1 and the player score when necessary by 1
+ * increments player score by 1 if necessary
  */
 function incrementPlayerScore(winningStatement) {
     const playerScore = document.querySelector('#score').innerHTML;
@@ -115,6 +115,9 @@ function incrementPlayerScore(winningStatement) {
         return playerScore;
     }
 }
+/**
+ * increments gameCount
+ */
 function incrementGameAmount() {
     const gameAmount = document.querySelector('#games-played').innerHTML;
     return (parseFloat(gameAmount) + 1);

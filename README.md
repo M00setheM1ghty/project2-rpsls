@@ -81,8 +81,6 @@ The image is supposed to highlight that the game is a version of rock paper scis
 
 #### Navigation bar
 
-#### Footer
-
 #### Landing/Welcome Page(=index.html)
 
 ![homepage]()
