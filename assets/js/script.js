@@ -35,8 +35,9 @@ document.querySelector('#rock').addEventListener('click', () => {
     displayWinningScreen(message);
     // update scoreboard
     const playerScore = incrementPlayerScore(winningStatement);
+    const computerScore = incrementComScore(winningStatement)
     const gameCount = incrementGameAmount(); 
-    updateScore(gameCount, playerScore);
+    updateScore(gameCount, playerScore, computerScore);
     
 })
 document.querySelector('#paper').addEventListener('click', () => {
@@ -46,8 +47,9 @@ document.querySelector('#paper').addEventListener('click', () => {
     displayWinningScreen(message);
     // update scoreboard
     const playerScore = incrementPlayerScore(winningStatement);
+    const computerScore = incrementComScore(winningStatement)
     const gameCount = incrementGameAmount(); 
-    updateScore(gameCount, playerScore);
+    updateScore(gameCount, playerScore, computerScore);
 })
 document.querySelector('#scissors').addEventListener('click', () => {
     const comChoice = generateComHand();
@@ -56,8 +58,9 @@ document.querySelector('#scissors').addEventListener('click', () => {
     displayWinningScreen(message);
     // update scoreboard
     const playerScore = incrementPlayerScore(winningStatement);
+    const computerScore = incrementComScore(winningStatement)
     const gameCount = incrementGameAmount(); 
-    updateScore(gameCount, playerScore);
+    updateScore(gameCount, playerScore, computerScore);
 })
 document.querySelector('#lizard').addEventListener('click', () => {
     const comChoice = generateComHand();
@@ -66,8 +69,9 @@ document.querySelector('#lizard').addEventListener('click', () => {
     displayWinningScreen(message);
     // update scoreboard
     const playerScore = incrementPlayerScore(winningStatement);
+    const computerScore = incrementComScore(winningStatement)
     const gameCount = incrementGameAmount(); 
-    updateScore(gameCount, playerScore);
+    updateScore(gameCount, playerScore, computerScore);
 })
 document.querySelector('#spock').addEventListener('click', () => {
     //find out the winner and display the winning message
@@ -77,8 +81,9 @@ document.querySelector('#spock').addEventListener('click', () => {
     displayWinningScreen(message);
     // update scoreboard
     const playerScore = incrementPlayerScore(winningStatement);
+    const computerScore = incrementComScore(winningStatement)
     const gameCount = incrementGameAmount(); 
-    updateScore(gameCount, playerScore);
+    updateScore(gameCount, playerScore, computerScore);
 })
 /**
  * creates winning message according to the games result
@@ -100,7 +105,8 @@ document.getElementById('reset-btn').addEventListener('click', () => {
     document.querySelector('.header-div').innerHTML = `<h3>Click a button to play against the computer.</h3>
     <h3>Choose between rock, paper, scissors, lizard and spock below:</h3>
     <h2>Make a choice!</h2>`;
-    document.querySelector('#score').innerHTML = 0;
+    document.querySelector('#score-human').innerHTML = 0;
+    document.querySelector('#score-com').innerHTML = 0;
     document.querySelector('#games-played').innerHTML = 0;
 })
 
@@ -108,11 +114,22 @@ document.getElementById('reset-btn').addEventListener('click', () => {
  * increments player score by 1 if necessary
  */
 function incrementPlayerScore(winningStatement) {
-    const playerScore = document.querySelector('#score').innerHTML;
+    const playerScore = document.querySelector('#score-human').innerHTML;
     if (winningStatement === 'Congrats. You won!') {
         return (parseFloat(playerScore) + 1)
     } else {
         return playerScore;
+    }
+}
+/**
+ * increments COM score by 1 if necessary
+ */
+function incrementComScore(winningStatement) {
+    const comScore = document.querySelector('#score-com').innerHTML;
+    if (winningStatement === 'The computer won.') {
+        return (parseFloat(comScore) + 1)
+    } else {
+        return comScore;
     }
 }
 /**
@@ -125,8 +142,9 @@ function incrementGameAmount() {
 /**
  * updates the scoreboard
  */
-function updateScore(gameCount, playerScore) {
-    document.querySelector('#score').innerHTML = playerScore;
+function updateScore(gameCount, playerScore,computerScore) {
+    document.querySelector('#score-human').innerHTML = playerScore;
+    document.querySelector('#score-com').innerHTML = computerScore;
     document.querySelector('#games-played').innerHTML = gameCount;
 }
 
