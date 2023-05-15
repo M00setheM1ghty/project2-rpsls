@@ -29,79 +29,52 @@ function generateComHand() {
 
 // event listeners for the buttons
 // returned values are passed on to the other functions as parameters
-let rockButton = document.querySelector('#rock')
-rockButton.addEventListener('click', () => {
-
+document.querySelector('#rock').addEventListener('click', () => {
     const comChoice = generateComHand();
     const winningStatement = pickedRockLogic(comChoice);
     const message = createsWinningMessage(ROCK, comChoice, winningStatement);
-    updateGamesPlayed();
-    const count = incrementCount()
-    displayGamesPlayed(count);
-    alert(message)
+    displayWinningScreen(message);
 })
-
-let paperButton = document.querySelector('#paper')
-paperButton.addEventListener('click', () => {
+document.querySelector('#paper').addEventListener('click', () => {
     const comChoice = generateComHand();
     const winningStatement = pickedPaperLogic(comChoice);
     const message = createsWinningMessage(PAPER, comChoice, winningStatement);
-    alert(message)
+    displayWinningScreen(message);
 })
-
-let scissorsButton = document.querySelector('#scissors')
-scissorsButton.addEventListener('click', () => {
+document.querySelector('#scissors').addEventListener('click', () => {
     const comChoice = generateComHand();
     const winningStatement = pickedScissorsLogic(comChoice);
     const message = createsWinningMessage(SCISSORS, comChoice, winningStatement)
-    alert(message);
+    displayWinningScreen(message);
 })
-
-
-let lizardButton = document.querySelector('#lizard')
-lizardButton.addEventListener('click', () => {
+document.querySelector('#lizard').addEventListener('click', () => {
     const comChoice = generateComHand();
     const winningStatement = pickedLizardLogic(comChoice);
     const message = createsWinningMessage(LIZARD, comChoice, winningStatement)
-    alert(message);
+    displayWinningScreen(message);
 })
-
-let spockButton = document.querySelector('#spock')
-spockButton.addEventListener('click', () => {
+document.querySelector('#spock').addEventListener('click', () => {
     const comChoice = generateComHand();
     const winningStatement = pickedSpockLogic(comChoice);
     const message = createsWinningMessage(SPOCK, comChoice, winningStatement)
-    alert(message);
+    displayWinningScreen(message);
 })
 
 /**
  * displays winning screen content according to the games result
  */
-function displayWinningScreen() {
-    displayMessage = document.createElement('div');
-    displayMessage.innerText = toString(winningMessage);
+function displayWinningScreen(message) {
+    document.querySelector('.header-div').innerHTML = message;
 }
-function updateScore(winningStatement,) {
+/**
+ * reset score, games played and the display
+ */
 
-}
+document.getElementById('reset-button').addEventListener('click', () => {
+    windows.location.reload();
+})
 
 
-// function updateGamesPlayed() {
-//     BUTTONS.forEach(element => {
-//         element.addEventListener('click', () => {
-//             return gamesPlayed
-//         })
-//     });
-// }
-
-// let gamesPlayed = 0;
-// function incrementCount(){
-//     return (gamesPlayed += 1)
-// }
-
-// function displayGamesPlayed(count) {
-//     document.getElementById('games-played').innerText = `Games played: ${count}`;
-// }
 
 //functions that determine the actions when a specific hand is chosen
 /**
