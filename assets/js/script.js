@@ -4,7 +4,6 @@ const PAPER = "paper"
 const SCISSORS = "scissors"
 const LIZARD = "lizard"
 const SPOCK = "spock"
-const BUTTONS = document.querySelectorAll('[data-button]');
 
 /**
  * generate a random number between 0 and 4 to choose a 'hand' for the computer
@@ -34,30 +33,52 @@ document.querySelector('#rock').addEventListener('click', () => {
     const winningStatement = pickedRockLogic(comChoice);
     const message = createsWinningMessage(ROCK, comChoice, winningStatement);
     displayWinningScreen(message);
+    // update scoreboard
+    const playerScore = incrementPlayerScore(winningStatement);
+    const gameCount = incrementGameAmount(); 
+    updateScore(gameCount, playerScore);
+    
 })
 document.querySelector('#paper').addEventListener('click', () => {
     const comChoice = generateComHand();
     const winningStatement = pickedPaperLogic(comChoice);
     const message = createsWinningMessage(PAPER, comChoice, winningStatement);
     displayWinningScreen(message);
+    // update scoreboard
+    const playerScore = incrementPlayerScore(winningStatement);
+    const gameCount = incrementGameAmount(); 
+    updateScore(gameCount, playerScore);
 })
 document.querySelector('#scissors').addEventListener('click', () => {
     const comChoice = generateComHand();
     const winningStatement = pickedScissorsLogic(comChoice);
     const message = createsWinningMessage(SCISSORS, comChoice, winningStatement)
     displayWinningScreen(message);
+    // update scoreboard
+    const playerScore = incrementPlayerScore(winningStatement);
+    const gameCount = incrementGameAmount(); 
+    updateScore(gameCount, playerScore);
 })
 document.querySelector('#lizard').addEventListener('click', () => {
     const comChoice = generateComHand();
     const winningStatement = pickedLizardLogic(comChoice);
     const message = createsWinningMessage(LIZARD, comChoice, winningStatement)
     displayWinningScreen(message);
+    // update scoreboard
+    const playerScore = incrementPlayerScore(winningStatement);
+    const gameCount = incrementGameAmount(); 
+    updateScore(gameCount, playerScore);
 })
 document.querySelector('#spock').addEventListener('click', () => {
+    //find out the winner and display the winning message
     const comChoice = generateComHand();
     const winningStatement = pickedSpockLogic(comChoice);
     const message = createsWinningMessage(SPOCK, comChoice, winningStatement)
     displayWinningScreen(message);
+    // update scoreboard
+    const playerScore = incrementPlayerScore(winningStatement);
+    const gameCount = incrementGameAmount(); 
+    updateScore(gameCount, playerScore);
 })
 /**
  * creates winning message according to the games result
@@ -82,6 +103,29 @@ document.getElementById('reset-btn').addEventListener('click', () => {
     document.querySelector('#score').innerHTML = 0;
     document.querySelector('#games-played').innerHTML = 0;
 })
+
+/**
+ * always increments how many games have been played by 1 and the player score when necessary by 1
+ */
+function incrementPlayerScore(winningStatement) {
+    const playerScore = document.querySelector('#score').innerHTML;
+    if (winningStatement === 'Congrats. You won!') {
+        return (parseFloat(playerScore) + 1)
+    } else {
+        return playerScore;
+    }
+}
+function incrementGameAmount() {
+    const gameAmount = document.querySelector('#games-played').innerHTML;
+    return (parseFloat(gameAmount) + 1);
+}
+/**
+ * updates the scoreboard
+ */
+function updateScore(gameCount, playerScore) {
+    document.querySelector('#score').innerHTML = playerScore;
+    document.querySelector('#games-played').innerHTML = gameCount;
+}
 
 //functions that determine the actions when a specific hand is chosen
 /**
