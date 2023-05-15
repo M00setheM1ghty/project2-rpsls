@@ -59,7 +59,12 @@ document.querySelector('#spock').addEventListener('click', () => {
     const message = createsWinningMessage(SPOCK, comChoice, winningStatement)
     displayWinningScreen(message);
 })
-
+/**
+ * creates winning message according to the games result
+ */
+function createsWinningMessage(humanChoice, comChoice, winningStatement) {
+    return `You chose ${humanChoice}. The COM chose ${comChoice}. ${winningStatement} `
+}
 /**
  * displays winning screen content according to the games result
  */
@@ -70,11 +75,13 @@ function displayWinningScreen(message) {
  * reset score, games played and the display
  */
 
-document.getElementById('reset-button').addEventListener('click', () => {
-    windows.location.reload();
+document.getElementById('reset-btn').addEventListener('click', () => {
+    document.querySelector('.header-div').innerHTML = `<h3>Click a button to play against the computer.</h3>
+    <h3>Choose between rock, paper, scissors, lizard and spock below:</h3>
+    <h2>Make a choice!</h2>`;
+    document.querySelector('#score').innerHTML = 0;
+    document.querySelector('#games-played').innerHTML = 0;
 })
-
-
 
 //functions that determine the actions when a specific hand is chosen
 /**
@@ -158,9 +165,4 @@ function pickedSpockLogic(comChoice) {
     }
 }
 
-/**
- * creates winning message according to the games result
- */
-function createsWinningMessage(humanChoice, comChoice, winningStatement) {
-    return `You chose ${humanChoice}. The COM chose ${comChoice}. ${winningStatement} `
-}
+
