@@ -26,9 +26,9 @@ function generateComHand() {
     }
 }
 
-// event listeners for the buttons
+// functions which are called when their respective buttons are clicked
 // returned values are passed on to the other functions as parameters
-document.querySelector('#rock').addEventListener('click', () => {
+const ROCKFUNCTION = function (ROCK) {
     const comChoice = generateComHand();
     const winningStatement = pickedRockLogic(comChoice);
     const message = createsWinningMessage(ROCK, comChoice, winningStatement);
@@ -39,8 +39,8 @@ document.querySelector('#rock').addEventListener('click', () => {
     const gameCount = incrementGameAmount();
     updateScore(gameCount, playerScore, computerScore);
 
-})
-document.querySelector('#paper').addEventListener('click', () => {
+}
+const PAPERFUNCTION = function (PAPER) {
     const comChoice = generateComHand();
     const winningStatement = pickedPaperLogic(comChoice);
     const message = createsWinningMessage(PAPER, comChoice, winningStatement);
@@ -50,8 +50,8 @@ document.querySelector('#paper').addEventListener('click', () => {
     const computerScore = incrementComScore(winningStatement)
     const gameCount = incrementGameAmount();
     updateScore(gameCount, playerScore, computerScore);
-})
-document.querySelector('#scissors').addEventListener('click', () => {
+}
+const SCISSORSFUNCTION = function(SCISSORS) {
     const comChoice = generateComHand();
     const winningStatement = pickedScissorsLogic(comChoice);
     const message = createsWinningMessage(SCISSORS, comChoice, winningStatement)
@@ -61,8 +61,8 @@ document.querySelector('#scissors').addEventListener('click', () => {
     const computerScore = incrementComScore(winningStatement)
     const gameCount = incrementGameAmount();
     updateScore(gameCount, playerScore, computerScore);
-})
-document.querySelector('#lizard').addEventListener('click', () => {
+}
+const LIZARDFUNCTION = function(LIZARD) {
     const comChoice = generateComHand();
     const winningStatement = pickedLizardLogic(comChoice);
     const message = createsWinningMessage(LIZARD, comChoice, winningStatement)
@@ -72,8 +72,8 @@ document.querySelector('#lizard').addEventListener('click', () => {
     const computerScore = incrementComScore(winningStatement)
     const gameCount = incrementGameAmount();
     updateScore(gameCount, playerScore, computerScore);
-})
-document.querySelector('#spock').addEventListener('click', () => {
+}
+const SPOCKFUNCTION = function(SPOCK){
     //find out the winner and display the winning message
     const comChoice = generateComHand();
     const winningStatement = pickedSpockLogic(comChoice);
@@ -84,7 +84,7 @@ document.querySelector('#spock').addEventListener('click', () => {
     const computerScore = incrementComScore(winningStatement)
     const gameCount = incrementGameAmount();
     updateScore(gameCount, playerScore, computerScore);
-})
+}
 /**
  * creates winning message according to the games result
  */
@@ -100,7 +100,6 @@ function displayWinningScreen(message) {
 /**
  * reset score, games played and the display
  */
-
 document.getElementById('reset-btn').addEventListener('click', () => {
     document.querySelector('.header-div').innerHTML = `<h3>Click a button to play against the computer.</h3>
     <h3>Choose between rock, paper, scissors, lizard and spock below:</h3>
