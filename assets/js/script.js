@@ -36,9 +36,9 @@ document.querySelector('#rock').addEventListener('click', () => {
     // update scoreboard
     const playerScore = incrementPlayerScore(winningStatement);
     const computerScore = incrementComScore(winningStatement)
-    const gameCount = incrementGameAmount(); 
+    const gameCount = incrementGameAmount();
     updateScore(gameCount, playerScore, computerScore);
-    
+
 })
 document.querySelector('#paper').addEventListener('click', () => {
     const comChoice = generateComHand();
@@ -48,7 +48,7 @@ document.querySelector('#paper').addEventListener('click', () => {
     // update scoreboard
     const playerScore = incrementPlayerScore(winningStatement);
     const computerScore = incrementComScore(winningStatement)
-    const gameCount = incrementGameAmount(); 
+    const gameCount = incrementGameAmount();
     updateScore(gameCount, playerScore, computerScore);
 })
 document.querySelector('#scissors').addEventListener('click', () => {
@@ -59,7 +59,7 @@ document.querySelector('#scissors').addEventListener('click', () => {
     // update scoreboard
     const playerScore = incrementPlayerScore(winningStatement);
     const computerScore = incrementComScore(winningStatement)
-    const gameCount = incrementGameAmount(); 
+    const gameCount = incrementGameAmount();
     updateScore(gameCount, playerScore, computerScore);
 })
 document.querySelector('#lizard').addEventListener('click', () => {
@@ -70,7 +70,7 @@ document.querySelector('#lizard').addEventListener('click', () => {
     // update scoreboard
     const playerScore = incrementPlayerScore(winningStatement);
     const computerScore = incrementComScore(winningStatement)
-    const gameCount = incrementGameAmount(); 
+    const gameCount = incrementGameAmount();
     updateScore(gameCount, playerScore, computerScore);
 })
 document.querySelector('#spock').addEventListener('click', () => {
@@ -82,7 +82,7 @@ document.querySelector('#spock').addEventListener('click', () => {
     // update scoreboard
     const playerScore = incrementPlayerScore(winningStatement);
     const computerScore = incrementComScore(winningStatement)
-    const gameCount = incrementGameAmount(); 
+    const gameCount = incrementGameAmount();
     updateScore(gameCount, playerScore, computerScore);
 })
 /**
@@ -142,7 +142,7 @@ function incrementGameAmount() {
 /**
  * updates the scoreboard
  */
-function updateScore(gameCount, playerScore,computerScore) {
+function updateScore(gameCount, playerScore, computerScore) {
     document.querySelector('#score-human').innerHTML = playerScore;
     document.querySelector('#score-com').innerHTML = computerScore;
     document.querySelector('#games-played').innerHTML = gameCount;
@@ -153,77 +153,57 @@ function updateScore(gameCount, playerScore,computerScore) {
  * Logic for when Rock is picked by the player
  */
 function pickedRockLogic(comChoice) {
-    if (comChoice === 'rock') {
-        return 'It is a tie.'
-    } else if (comChoice === 'paper') {
+    if (comChoice === 'paper' || comChoice === 'spock') {
         return 'The computer won.'
-    } else if (comChoice === 'scissors') {
-        return 'Congrats. You won!'
-    } else if (comChoice === 'lizard') {
+    } else if (comChoice === 'scissors' || comChoice === 'lizard') {
         return 'Congrats. You won!'
     } else {
-        return 'The computer won.'
+        return 'It is a tie.'
     }
 }
 /**
  * Logic for when Paper is picked by the player
  */
 function pickedPaperLogic(comChoice) {
-    if (comChoice === 'rock') {
+    if (comChoice === 'rock' || comChoice === 'spock') {
         return 'Congrats. You won!'
-    } else if (comChoice === 'paper') {
-        return 'It is a tie.'
-    } else if (comChoice === 'scissors') {
-        return 'The computer won.'
-    } else if (comChoice === 'lizard') {
+    } else if (comChoice === 'scissors' || comChoice === 'lizard') {
         return 'The computer won.'
     } else {
-        return 'Congrats. You won!'
+        return 'It is a tie.'
     }
 }
 /**
  * Logic for when Scissors is picked by the player
  */
 function pickedScissorsLogic(comChoice) {
-    if (comChoice === 'rock') {
+    if (comChoice === 'rock' || comChoice === 'spock') {
         return 'The computer won.'
-    } else if (comChoice === 'paper') {
-        return 'Congrats. You won!'
-    } else if (comChoice === 'scissors') {
-        return 'It is a tie.'
-    } else if (comChoice === 'lizard') {
+    } else if (comChoice === 'paper' || comChoice === 'lizard') {
         return 'Congrats. You won!'
     } else {
-        return 'The computer won.'
+        return 'It is a tie.'
     }
 }
 /**
  * Logic for when Lizard is picked by the player
  */
 function pickedLizardLogic(comChoice) {
-    if (comChoice === 'rock') {
+    if (comChoice === 'rock' || comChoice === 'scissors') {
         return 'The computer won.'
-    } else if (comChoice === 'paper') {
+    } else if (comChoice === 'paper' || comChoice === 'spock') {
         return 'Congrats. You won!'
-    } else if (comChoice === 'scissors') {
-        return 'The computer won.'
-    } else if (comChoice === 'lizard') {
-        return 'It is a tie.'
     } else {
-        return 'Congrats. You won!'
+        return 'It is a tie.'
     }
 }
 /**
  * Logic for when Spock is picked by the player
  */
 function pickedSpockLogic(comChoice) {
-    if (comChoice === 'rock') {
+    if (comChoice === 'rock' || comChoice === 'scissors') {
         return 'Congrats. You won!'
-    } else if (comChoice === 'paper') {
-        return 'The computer won.'
-    } else if (comChoice === 'scissors') {
-        return 'Congrats. You won!'
-    } else if (comChoice === 'lizard') {
+    } else if (comChoice === 'paper' || comChoice === 'lizard') {
         return 'The computer won.'
     } else {
         return 'It is a tie.'
