@@ -82,14 +82,23 @@ The image is supposed to highlight that the game is a version of rock paper scis
 ### Existing Features
 
 #### Navigation Bar:
-Included over all pages. makes it possible to easily navigate between the pages.
-![navbar]{}
+Included over all pages. makes it possible to easily navigate between the pages.<br>
+![navbar](./assets/images/navbar_rps.webp)
 
-#### Navigation bar
+#### Games Page(=index.html)
 
-#### Landing/Welcome Page(=index.html)
+A simple layout, which makes the purpose of the page obvious.<br>
+![homepage](./assets/images/gamepage_rps.webp)
 
-![homepage]()
+#### Rules Page(=rules.html)
+
+Explains the general rules of the game.<br>
+![rulespage](./assets/images/rulespage_rps.webp)
+
+#### About Page(=about.html)
+
+Gives some background information to the origins of the game for those interested.<br>
+![aboutpage](./assets/images/aboutpage_rps.webp)
 
 ### Testing
 
@@ -100,9 +109,17 @@ Included over all pages. makes it possible to easily navigate between the pages.
 
 #### Lighthouse
 
+The page's lighthouse score:<br>
+![lighthouse](./assets/images/lighthouse_rps.webp)
+
 #### W3C
 
+The page passed through the W3C validation:
+![W3C](./assets/images/)
 #### Jigsaw
+
+The page passed through the jigsaw validator:<br>
+![jigsaw](./assets/images/jigsaw_project2.webp)
 
 ### Bugs
 
