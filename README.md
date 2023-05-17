@@ -2,7 +2,7 @@
 
 This site provides the game Rock, Paper, Scissors, Lizard, Spock to play online.
 
-![Responsive Design](./assets/images/amiresponsive2.webp)
+![Responsive Design](./assets/images-readme/amiresponsive2.webp)
 
 <em>The Website is already live: [HERE][responsivedesign]</em>
 
@@ -61,9 +61,10 @@ Track the score and maybe implement a scoreboard to encourage coming back to pla
 ## Design
 
 ### Colour Scheme
+
 These are the used colors in order: burlywood, brown, aliceblue, cornflowerblue and black. <br>
 
-![Color Palette](./assets/images/colorpallete_rps.webp)
+![Color Palette](./assets/images-readme/colorpallete-rps.webp)
 
 Burlywood was used as the body's background color. The redish brown pops the content and buttons nicely off the background. <br>
 The general text-content color is black.<br>
@@ -71,7 +72,9 @@ In contrast the buttons and navbar have aliceblue as font color to distinguish t
 To make sure it is obvious that buttons/nav-elements are supposed to be clicked the text color changes to cornflowerblue on hover.<br>
 
 ### Typography
+
 The fonts are set to default.
+
 ### Imagery
 
 All the images found on the website are free stock images from [Pixabay][def3]. <br>
@@ -81,24 +84,25 @@ The image is supposed to highlight that the game is a version of rock paper scis
 
 ### Existing Features
 
-#### Navigation Bar:
+#### Navigation Bar
+
 Included over all pages. makes it possible to easily navigate between the pages.<br>
-![navbar](./assets/images/navbar_rps.webp)
+![navbar](./assets/images-readme/navbar-rps.webp)
 
 #### Games Page(=index.html)
 
 A simple layout, which makes the purpose of the page obvious.<br>
-![homepage](./assets/images/gamepage_rps.webp)
+![homepage](./assets/images-readme/gamepage-rps.webp)
 
 #### Rules Page(=rules.html)
 
 Explains the general rules of the game.<br>
-![rulespage](./assets/images/rulespage_rps.webp)
+![rulespage](./assets/images-readme/rulespage-rps.webp)
 
 #### About Page(=about.html)
 
 Gives some background information to the origins of the game for those interested.<br>
-![aboutpage](./assets/images/aboutpage_rps.webp)
+![aboutpage](./assets/images-readme/aboutpage-rps.webp)
 
 ### Testing
 
@@ -110,18 +114,17 @@ Gives some background information to the origins of the game for those intereste
 #### Lighthouse
 
 The page's lighthouse score:<br>
-![lighthouse](./assets/images/lighthouse_rps.webp)
+![lighthouse](./assets/images-readme/lighthouse-rps.webp)
 
 #### W3C
 
 The page passed through the W3C validation:
-![W3C](./assets/images/)
+![W3C](./assets/images-readme/)
+
 #### Jigsaw
 
 The page passed through the jigsaw validator:<br>
-![jigsaw](./assets/images/jigsaw_project2.webp)
-
-### Bugs
+![jigsaw](./assets/images/jigsaw-project2.webp)
 
 ## Technologies Used
 
@@ -145,7 +148,7 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 
 + In the GitHub repository, navigate to the Settings tab
 + In the left side menu under Code and Automation find Pages and click it.
-+ This opene GitHubPages. On the top you can find the link to the live page. The Visit Button brings you there automatically in a new tab.
++ This opens GitHubPages. On the top you can find the link to the live page. The Visit Button brings you there automatically in a new tab.
 + The live link can be found [HERE](https://m00sethem1ghty.github.io/project2-rpsls/
 ) as well.
 
