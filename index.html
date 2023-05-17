@@ -10,6 +10,9 @@
     <script src="./assets/js/script.js" defer></script>
     <script src="https://kit.fontawesome.com/83c8870d31.js" crossorigin="anonymous" defer></script>
     <title>Rock Paper Scissors Lizard Spock</title>
+
+
+<body>
     <!-- header with navigation -->
     <header class="header">
         <div id="header-div">
@@ -20,44 +23,48 @@
             </ul>
         </div>
     </header>
-
-<body>
-    <div class="container">
-        <!-- top section with header and game image -->
-        <section class="top-section">
-            <h1>Rock <i class="fa-regular fa-hand-back-fist"></i></i></i> Paper<i class="fa-regular fa-paper-plane"></i>
-                Scissors<i class="fa-sharp fa-solid fa-scissors"></i> Lizard<i
-                    class="fa-regular fa-hand-lizard"></i></i> Spock<i class="fa-regular fa-hand-spock"></i></h1>
-            <div id="img-div">
-                <img src="assets/images/rps_banner.webp" alt="shows three hands doing rock paper scissors">
-            </div>
-        </section>
-        <!-- game section with description and game elements -->
-        <section class="game-section">
-            <div class="header-div">
-                <h3>Click a button to play against the computer.</h3>
-                <h3>Choose between rock, paper, scissors, lizard and spock below:</h3>
-                <h2>Make a choice!</h2>
-            </div>
-            <div class='btns-div'>
-                <button class="choice-btn" id="rock">Rock</button>
-                <button class="choice-btn" id="paper">Paper</button>
-                <button class="choice-btn" id="scissors">Scissors</button>
-                <button class="choice-btn" id="lizard">Lizard</button>
-                <button class="choice-btn" id="spock">Spock</button>
-                <button class="choice-btn" id="reset-btn">RESET</button>
-            </div>
-        </section>
-        <!-- score section to keep track of score and games played -->
-        <section class="score-section">
-            <p>Games won:</p>
-            <p id="score-human">0</p>
-            <p>Games lost:</p>
-            <p id="score-com">0</p>
-            <p>Games played:</p>
-            <p id="games-played">0</p>
-        </section>
-    </div>
+    <main>
+        <div class="container">
+            <!-- top section with header and game image -->
+            <section class="top-section">
+                <h1>Rock <i class="fa-regular fa-hand-back-fist"></i></i></i> Paper<i
+                        class="fa-regular fa-paper-plane"></i>
+                    Scissors<i class="fa-sharp fa-solid fa-scissors"></i> Lizard<i
+                        class="fa-regular fa-hand-lizard"></i></i> Spock<i class="fa-regular fa-hand-spock"></i></h1>
+                <div id="img-div">
+                    <img src="assets/images/rps_banner.webp" alt="shows three hands doing rock paper scissors">
+                </div>
+            </section>
+            <!-- game section with description and game elements -->
+            <section class="game-section">
+                <div class="header-div">
+                    <h3>Click a button to play against the computer.</h3>
+                    <h3>Choose between rock, paper, scissors, lizard and spock below:</h3>
+                    <h2>Make a choice!</h2>
+                </div>
+                <div class='btns-div'>
+                    <button class="choice-btn" id="rock" onclick="ROCKFUNCTION(ROCK)">Rock</button>
+                    <button class="choice-btn" id="paper" onclick="PAPERFUNCTION(PAPER)">Paper</button>
+                    <button class="choice-btn" id="scissors" onclick="SCISSORSFUNCTION(SCISSORS)">Scissors</button>
+                    <button class="choice-btn" id="lizard" onclick="LIZARDFUNCTION(LIZARD)">Lizard</button>
+                    <button class="choice-btn" id="spock" onclick="SPOCKFUNCTION(SPOCK)">Spock</button>
+                    <button class="choice-btn" id="reset-btn">RESET</button>
+                </div>
+            </section>
+            <!-- score section to keep track of score and games played -->
+            <section class="score-section">
+                <p>Games won:</p>
+                <p id="score-human">0</p>
+                <p>Games lost:</p>
+                <p id="score-com">0</p>
+                <p>Games played:</p>
+                <p id="games-played">0</p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        This page is for educational purposes only.
+    </footer>
 </body>
 
 </html>

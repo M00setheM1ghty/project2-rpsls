@@ -11,6 +11,7 @@ body {
     margin: auto;
     max-width: fit-content;
     text-align: center;
+    height: 100%;
 }
 
 .container {
@@ -51,7 +52,18 @@ body {
 #header-div a:hover {
     color: cornflowerblue;
 }
-
+/* footer styling */
+footer {
+    background-color: brown;
+    color: aliceblue;
+    font-size: 1rem;
+    border-radius: 5%;
+    margin-top: 100px;
+    padding: 5px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
 /* top section styling */
 .top-section {
     display: flex;
