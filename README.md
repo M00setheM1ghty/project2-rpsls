@@ -2,7 +2,7 @@
 
 This site provides the game Rock, Paper, Scissors, Lizard, Spock to play online.
 
-![Responsive Design]()
+![Responsive Design](./assets/images/amiresponsive2.webp)
 
 <em>The Website is already live: [HERE][responsivedesign]</em>
 
@@ -23,11 +23,9 @@ This site provides the game Rock, Paper, Scissors, Lizard, Spock to play online.
   + [Existing Features](#existing-features "Existing Features")
 + [Testing](#testing "Testing")
   + [Validator Testing](#validator-testing "Validator Testing")
-  + [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
 + [Technologies Used](#technologies-used "Technologies Used")
   + [Main Languages Used](#main-languages-used "Main Languages Used")
-  + [Frameworks, Libraries & Programs Used]
-  (#frameworks-libraries-programs-used "Frameworks, Libraries & Programs Used")
+  + [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used "Frameworks, Libraries & Programs Used")
 + [Deployment](#deployment "Deployment")
 + [Credits](#credits "Credits")
   + [Content](#content "Content")
@@ -63,13 +61,17 @@ Track the score and maybe implement a scoreboard to encourage coming back to pla
 ## Design
 
 ### Colour Scheme
+These are the used colors in order: burlywood, brown, aliceblue, cornflowerblue and black. <br>
 
-The color palette was kept very simplistic with black and #blanchedalmond (hex-code: #FFEBCD) as background colors. <br>
+![Color Palette](./assets/images/colorpallete_rps.webp)
 
-![Color Palette]()
+Burlywood was used as the body's background color. The redish brown pops the content and buttons nicely off the background. <br>
+The general text-content color is black.<br>
+In contrast the buttons and navbar have aliceblue as font color to distinguish them.<br>
+To make sure it is obvious that buttons/nav-elements are supposed to be clicked the text color changes to cornflowerblue on hover.<br>
 
 ### Typography
-
+The fonts are set to default.
 ### Imagery
 
 All the images found on the website are free stock images from [Pixabay][def3]. <br>
@@ -78,6 +80,10 @@ The image is supposed to highlight that the game is a version of rock paper scis
 ## Features
 
 ### Existing Features
+
+#### Navigation Bar:
+Included over all pages. makes it possible to easily navigate between the pages.
+![navbar]{}
 
 #### Navigation bar
 
@@ -119,37 +125,39 @@ The image is supposed to highlight that the game is a version of rock paper scis
 ## Deployment
 
 The site was deployed to GitHub pages. The steps to deploy are as follows:
+
 + In the GitHub repository, navigate to the Settings tab
 + In the left side menu under Code and Automation find Pages and click it.
 + This opene GitHubPages. On the top you can find the link to the live page. The Visit Button brings you there automatically in a new tab.
-+ The live link can be found [HERE] as well.
++ The live link can be found [HERE](https://m00sethem1ghty.github.io/project2-rpsls/
+) as well.
 
 ## Credits
 
-The template for this readme and also the structure of the signup forms were taken(after asking) from my mentors project [LaLucha][def6].<br>
+The template for this readme was taken(after asking) from my mentors project [LaLucha][def6].<br>
 She also turned me onto using flexbox for styling the site. This site was used for learning the flexbox basics: [FlexBoxFroggy][def7].<br>
 
 Thank you Lauren!
 
-I have some knowledge from certifications I did outside of CodeInstitute so I relied less on sources from the internet. Hence the credit section is rather short. <br>
+I have some knowledge from certifications I did outside of CodeInstitute so I relied less on sources from the internet.<br>
 [freeCodeCamp Certification][freecode]
-[freeCodeCamp Certification2]<https://www.freecodecamp.org/certification/MightyM00se/javascript-algorithms-and-data-structures>
+[freeCodeCamp Certification2](https://www.freecodecamp.org/certification/MightyM00se/javascript-algorithms-and-data-structures)
 
 About section content: <https://screenrant.com/big-bang-theory-sheldon-rock-paper-scissors-rules/>
 
-Stack Overflow provided the method to call to functions with one event listener:
+Stack Overflow provided the idea to call multiple functions with one:
 <https://stackoverflow.com/questions/25028853/addeventlistener-two-functions>
 
 ### Content
 
-The content was inspired by one of the project suggestions given in the course.
+The content was inspired by one of the project suggestions given in the course material.
 
 ### Media
 
 Here are the free stock pictures from pixabay:
 <https://pixabay.com/vectors/fingers-fist-hands-paper-rock-149296/>
 
-Here is the free use favicon image:
+The same image was used for the favicon:
 
 [Favicon.io][def2] was used to convert it to the right size.<br>
 
