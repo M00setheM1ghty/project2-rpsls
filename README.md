@@ -124,7 +124,7 @@ The page passed through the W3C validation:
 #### Jigsaw
 
 The page passed through the jigsaw validator:<br>
-![jigsaw](./assets/images/jigsaw-project2.webp)
+![jigsaw](./assets/images-readme/jigsaw-project2.webp)
 
 ## Technologies Used
 
@@ -177,7 +177,8 @@ The content was inspired by one of the project suggestions given in the course m
 Here are the free stock pictures from pixabay:
 <https://pixabay.com/vectors/fingers-fist-hands-paper-rock-149296/>
 
-The same image was used for the favicon:
+This image was used for the favicon:
+https://pixabay.com/vectors/rock-paper-scissors-rock-hand-296854/<br>
 
 [Favicon.io][def2] was used to convert it to the right size.<br>
 
