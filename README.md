@@ -119,7 +119,7 @@ The page's lighthouse score:<br>
 #### W3C
 
 The page passed through the W3C validation:
-![W3C](./assets/images-readme/)
+![W3C](./assets/images-readme/w3c-validation-p2.webp)
 
 #### Jigsaw
 
