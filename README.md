@@ -136,8 +136,7 @@ The page passed through the jigsaw validator:<br>
 
 ### Frameworks, Libraries & Programs Used
 
-+ Google Fonts
-+ Font Awesome - to add icons to the social links in the footer element.
++ Font Awesome - to add icons the header
 + CodeAnywhere/VS Code
 + GitHub - to store my repository for submission.
 + Am I Responsive? - shows responsiveness over all device sizes.
