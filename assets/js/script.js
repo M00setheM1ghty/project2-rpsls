@@ -1,9 +1,9 @@
 // variables
-const ROCK = "rock"
-const PAPER = "paper"
-const SCISSORS = "scissors"
-const LIZARD = "lizard"
-const SPOCK = "spock"
+const ROCK = "rock";
+const PAPER = "paper";
+const SCISSORS = "scissors";
+const LIZARD = "lizard";
+const SPOCK = "spock";
 
 /**
  * generate a random number between 0 and 4 to choose a 'hand' for the computer
@@ -35,7 +35,7 @@ const ROCKFUNCTION = function (ROCK) {
     displayWinningScreen(message);
     // update scoreboard
     const playerScore = incrementPlayerScore(winningStatement);
-    const computerScore = incrementComScore(winningStatement)
+    const computerScore = incrementComScore(winningStatement);
     const gameCount = incrementGameAmount();
     updateScore(gameCount, playerScore, computerScore);
 
@@ -47,18 +47,18 @@ const PAPERFUNCTION = function (PAPER) {
     displayWinningScreen(message);
     // update scoreboard
     const playerScore = incrementPlayerScore(winningStatement);
-    const computerScore = incrementComScore(winningStatement)
+    const computerScore = incrementComScore(winningStatement);
     const gameCount = incrementGameAmount();
     updateScore(gameCount, playerScore, computerScore);
 }
 const SCISSORSFUNCTION = function(SCISSORS) {
     const comChoice = generateComHand();
     const winningStatement = pickedScissorsLogic(comChoice);
-    const message = createsWinningMessage(SCISSORS, comChoice, winningStatement)
+    const message = createsWinningMessage(SCISSORS, comChoice, winningStatement);
     displayWinningScreen(message);
     // update scoreboard
     const playerScore = incrementPlayerScore(winningStatement);
-    const computerScore = incrementComScore(winningStatement)
+    const computerScore = incrementComScore(winningStatement);
     const gameCount = incrementGameAmount();
     updateScore(gameCount, playerScore, computerScore);
 }
@@ -69,7 +69,7 @@ const LIZARDFUNCTION = function(LIZARD) {
     displayWinningScreen(message);
     // update scoreboard
     const playerScore = incrementPlayerScore(winningStatement);
-    const computerScore = incrementComScore(winningStatement)
+    const computerScore = incrementComScore(winningStatement);
     const gameCount = incrementGameAmount();
     updateScore(gameCount, playerScore, computerScore);
 }
@@ -77,11 +77,11 @@ const SPOCKFUNCTION = function(SPOCK){
     //find out the winner and display the winning message
     const comChoice = generateComHand();
     const winningStatement = pickedSpockLogic(comChoice);
-    const message = createsWinningMessage(SPOCK, comChoice, winningStatement)
+    const message = createsWinningMessage(SPOCK, comChoice, winningStatement);
     displayWinningScreen(message);
     // update scoreboard
     const playerScore = incrementPlayerScore(winningStatement);
-    const computerScore = incrementComScore(winningStatement)
+    const computerScore = incrementComScore(winningStatement);
     const gameCount = incrementGameAmount();
     updateScore(gameCount, playerScore, computerScore);
 }
@@ -95,7 +95,7 @@ function createsWinningMessage(humanChoice, comChoice, winningStatement) {
  * displays winning screen content according to the games result
  */
 function displayWinningScreen(message) {
-    document.querySelector('.header-div').innerHTML = message;
+    document.querySelector('.header-div').innerHTML = message
 }
 /**
  * reset score, games played and the display
@@ -115,7 +115,7 @@ document.getElementById('reset-btn').addEventListener('click', () => {
 function incrementPlayerScore(winningStatement) {
     const playerScore = document.querySelector('#score-human').innerHTML;
     if (winningStatement === 'Congrats. You won!') {
-        return (parseFloat(playerScore) + 1)
+        return (parseFloat(playerScore) + 1);
     } else {
         return playerScore;
     }
@@ -126,7 +126,7 @@ function incrementPlayerScore(winningStatement) {
 function incrementComScore(winningStatement) {
     const comScore = document.querySelector('#score-com').innerHTML;
     if (winningStatement === 'The computer won.') {
-        return (parseFloat(comScore) + 1)
+        return (parseFloat(comScore) + 1);
     } else {
         return comScore;
     }
@@ -153,11 +153,11 @@ function updateScore(gameCount, playerScore, computerScore) {
  */
 function pickedRockLogic(comChoice) {
     if (comChoice === 'paper' || comChoice === 'spock') {
-        return 'The computer won.'
+        return 'The computer won.';
     } else if (comChoice === 'scissors' || comChoice === 'lizard') {
-        return 'Congrats. You won!'
+        return 'Congrats. You won!';
     } else {
-        return 'It is a tie.'
+        return 'It is a tie.';
     }
 }
 /**
@@ -165,11 +165,11 @@ function pickedRockLogic(comChoice) {
  */
 function pickedPaperLogic(comChoice) {
     if (comChoice === 'rock' || comChoice === 'spock') {
-        return 'Congrats. You won!'
+        return 'Congrats. You won!';
     } else if (comChoice === 'scissors' || comChoice === 'lizard') {
-        return 'The computer won.'
+        return 'The computer won.';
     } else {
-        return 'It is a tie.'
+        return 'It is a tie.';
     }
 }
 /**
@@ -177,11 +177,11 @@ function pickedPaperLogic(comChoice) {
  */
 function pickedScissorsLogic(comChoice) {
     if (comChoice === 'rock' || comChoice === 'spock') {
-        return 'The computer won.'
+        return 'The computer won.';
     } else if (comChoice === 'paper' || comChoice === 'lizard') {
-        return 'Congrats. You won!'
+        return 'Congrats. You won!';
     } else {
-        return 'It is a tie.'
+        return 'It is a tie.';
     }
 }
 /**
@@ -189,11 +189,11 @@ function pickedScissorsLogic(comChoice) {
  */
 function pickedLizardLogic(comChoice) {
     if (comChoice === 'rock' || comChoice === 'scissors') {
-        return 'The computer won.'
+        return 'The computer won.';
     } else if (comChoice === 'paper' || comChoice === 'spock') {
-        return 'Congrats. You won!'
+        return 'Congrats. You won!';
     } else {
-        return 'It is a tie.'
+        return 'It is a tie.';
     }
 }
 /**
@@ -201,11 +201,11 @@ function pickedLizardLogic(comChoice) {
  */
 function pickedSpockLogic(comChoice) {
     if (comChoice === 'rock' || comChoice === 'scissors') {
-        return 'Congrats. You won!'
+        return 'Congrats. You won!';
     } else if (comChoice === 'paper' || comChoice === 'lizard') {
-        return 'The computer won.'
+        return 'The computer won.';
     } else {
-        return 'It is a tie.'
+        return 'It is a tie.';
     }
 }
 

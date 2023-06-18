@@ -108,8 +108,19 @@ Gives some background information to the origins of the game for those intereste
 
 + I tested the page with DevTools in Chrome, Firefox and Edge and encountered no issues. <br>
 + The site is responsive and formats correctly until a width of 320px.<br>
++ All navigation buttons take you to the correct page and they work on all three pages.
++ BUTTONS:
+  + The RESET button sets all counters to zero at all times.
+  + The game buttons work when clicked once or several times and display the correct message, depending on who won the round.
+  + The game counters work correctly and increment the scoreboard according to the games played.
 
 ### Validator Testing
+
+#### JS Hint
+
+![jshint](./assets/images-readme/jshint.png)
+<br>
+All 61 warnings are concerning missing semicolons and ES6. Since the browser version runs on an older version it throws warnings when ES6 features are used in the code. I ignored the missing semicolons since they would not serve a purpose. Internet sources also deemed placing semicolons after curly braces unnecessary.
 
 #### Lighthouse
 
@@ -177,7 +188,7 @@ Here are the free stock pictures from pixabay:
 <https://pixabay.com/vectors/fingers-fist-hands-paper-rock-149296/>
 
 This image was used for the favicon:
-https://pixabay.com/vectors/rock-paper-scissors-rock-hand-296854/<br>
+<https://pixabay.com/vectors/rock-paper-scissors-rock-hand-296854/><br>
 
 [Favicon.io][def2] was used to convert it to the right size.<br>
 
