@@ -120,6 +120,7 @@ Gives some background information to the origins of the game for those intereste
 
 ![jshint](./assets/images-readme/jshint.png)
 <br>
+JS hint does not give any errors.
 All 61 warnings are concerning missing semicolons and ES6. Since the browser version runs on an older version it throws warnings when ES6 features are used in the code. I ignored the missing semicolons since they would not serve a purpose. Internet sources also deemed placing semicolons after curly braces unnecessary.
 
 #### Lighthouse
